@@ -8,9 +8,9 @@ const [outputText, setOutputText] = useState('Open up App.js to start working on
   return (
 
     <View style={{padding: 50}}>
-        <View >
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignContent:'center'}}>
           <TextInput placeholder="Course Goal"  
-          style={{ borderColor: 'black', borderWidth: 1 , padding:10}} />
+          style={{ width: '80%', borderColor: 'black', borderWidth: 1 , padding:10}} />
           <Button title="ADD" />
         </View>
     </View>
