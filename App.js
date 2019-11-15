@@ -13,6 +13,7 @@ export default function App() {
         ...currentGoals, 
         {id: Math.random().toString(), value: gaolTitle}
       ]);
+      setisAddMode(false);
     };
     
   const removeGoalHandler = goalId =>{
@@ -21,13 +22,15 @@ export default function App() {
     });
   }
 
-
+  const cancelGoalAdditionHandler = () =>{
+      setisAddMode(false);
+  }
 
 
   return (
     <View style={styles.screen}>
       <Button title="Add New Goal" onPress={()=> setisAddMode(true)} />
-        <GoalInput visible={isAddMode}  onAddGoal={addGoalHandler} />
+        <GoalInput  onCancel={cancelGoalAdditionHandler} visible={isAddMode}  onAddGoal={addGoalHandler} />
         <FlatList 
           keyExtractor={(item, index)=> item.id}
           data={courseGoals} 
