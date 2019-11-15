@@ -15,15 +15,14 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
-        <View style={{ }}>
+        <View style={styles.inputContainer}>
           <TextInput placeholder="Course Goal"   
-          style={styles.inputContainer} 
+          style={styles.input}
           onChangeText={goalInputHandler}
           value={enteredGoal}
            />
           <Button 
           title="ADD" 
-          styles={styles.input}
           onPress={addGoalHandler}
            />
         </View>
