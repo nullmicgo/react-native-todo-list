@@ -7,10 +7,9 @@ const [outputText, setOutputText] = useState('Open up App.js to start working on
 
   return (
 
-    <View style={{padding: 50}}>
+    <View style={styles.screen}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignContent:'center'}}>
-          <TextInput placeholder="Course Goal"  
-          style={{ width: '80%', borderColor: 'black', borderWidth: 1 , padding:10}} />
+          <TextInput placeholder="Course Goal"   style={styles.inputContainer} />
           <Button title="ADD" />
         </View>
     </View>
@@ -18,10 +17,13 @@ const [outputText, setOutputText] = useState('Open up App.js to start working on
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  screen:{
+    padding: 50
   },
+  inputContainer:{
+    width: '80%', 
+    borderColor: 'black', 
+    borderWidth: 1 , 
+    padding:10
+  }
 });
